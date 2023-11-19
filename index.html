@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+    content="width=device-width,
+    initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Senha</title>
+</head>
+<body>
+    <main>
+        <h1>Gerador de Senha</h1>
+        <h2>Utilize esse gerador para criar uma senha forte e segura</h2>
+        <div class="input">
+            <input type="text" id="senha" name="senha"></input>
+            <div class="senha">
+                <button id="copy">
+                    <img src="./copy.png" width="20px" height="30px" >
+                </button>
+                <button id="refresh" >
+                    <img src="./Refresh_icon.svg" width="20px" height="30px" >
+                </button>
+            </div>
+        </div>
+        <br>
+        <div class="barraSeguranca">
+            <div id="percentual" class="bad">
+            </div>
+        </div><br><br>
+        <div class="barra"><input 
+            width="40"
+            type="range"
+            id="barra"
+            value="10"
+            min="6"
+            max="32">
+            <div class="caixa">        
+                <div class="selecaoMaiuscula">
+                    <span class="box">Maículas</span>
+                    <input type="checkbox" id="maiuscula" checked>
+                    <span class="check"></span>
+                </div>
+                <div class="selecaoNumeros">        
+                    <span class="box">Números</span>
+                    <input type="checkbox" id="numeros" checked>
+                    <span class="check"></span>
+                </div>
+                <div class="selecaoSimbolos">        
+                    <span class="box">Símbolos</span>
+                    <input type="checkbox" id="simbolos" checked>
+                    <span class="check"></span>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="botaocopiar">
+            <button id="copia">copiar senha</button>
+        </div>
+   
+        <script>
+       
+       const entrada1= document.querySelector("#senha")
+       let barra = 6
+       function gerador() {
+           const chara="abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNPQRSTUVWXYZ1234567890!@#$%&"
+           let senha ="" 
+
+           for (let i=0;i< barra; i++) {
+               const numeroale = Math.floor(Math.random() *chara.length)
+               senha += chara.substring(numeroale,numeroale+1)         
+           }
+        
+           entrada1.value = senha
+
+       }
+
+       function copiar(){
+           navigator.clipboard.writeText(entrada1.value)
+       }
+       const senhatam = document.querySelector("#barra")
+       senhatam.addEventListener("input", function(){
+           barra=senhatam.value
+           gerador()
+       })
+       document.querySelector("#copy").addEventListener("click", copiar)
+        || document.querySelector("#copia").addEventListener("click", copiar)       
+
+
+       gerador()
+       
+     </script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+
+body{
+align-items: center;
+border-right: solid 2rem #8e17d3;
+border-bottom: #808080 solid 2rem;
+height: 100%;
+padding-bottom: 30rem;
+border-top: 2rem solid #808080;
+border-left: #8e17d3 solid 2rem;
+}
+
+
+h1{
+    text-align: center;
+    font-weight: 600;
+    margin: 5% 0%;
+}
+h2{
+    margin: 5%;
+    text-align: center; 
+    color: #808080;
+
+}
+.input{
+    align-items: center;
+    display: flex;
+}
+#senha{
+    margin-top: 5px;
+    margin-left: 2px;
+    padding: 1rem;
+    width: 70%;
+    font-size: x-large;
+    border: #fff;
+    box-shadow: inset rgba(128, 128, 128, 0.712) 0px -4px 3px;
+}
+
+.senha>button{
+    padding: 5px;
+    border: none;
+    opacity: .7;
+    cursor: pointer;
+ 
+}
+#barra{
+    width: 50%;
+    margin:0px 10%;
+    color: blueviolet;
+    cursor: e-resize;
+    
+}
+.barra{
+    vertical-align: middle;
+    align-content: center;
+    align-items:center;
+    display: flex;
+    
+}
+.caixa{
+    padding: 0rem 1rem 0rem .2rem;
+    border: solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 5px 4px 5px  grey;
+}
+
+.caixa>div{
+    margin: 10px 0px;
+}
+.barraSeguranca {
+    background-color: #dddddd;
+    width: 85%;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.barraSeguranca #percentual{
+    background-color: #dddddd;
+    border-top-right-radius: 0;
+}
+.barraSeguranca #percentualbad{
+    background-color: #f00;
+    border-top-right-radius: 0;
+    width: 90%;
+}
+.barraSeguranca #percentual .medium{
+    background-color: #ffff00;
+    border-top-right-radius: 0;
+}
+.barraSeguranca #percentual .good{
+    background-color: #0f0;
+    border-top-right-radius: 0;
+}
+.botaocopiar{
+    width: 100%;
+    margin-left: 30%;
+    align-items: center;
+    
+}
+#copia{
+    padding: .5rem;
+    background-color: #8e17d3;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    border-style: outset;
+    border-width: 4px;
+    border-color: #8e17d3;
+    cursor:pointer
+}
